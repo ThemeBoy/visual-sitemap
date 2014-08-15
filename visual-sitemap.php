@@ -140,7 +140,7 @@ class Visual_Sitemap {
 								</li>
 							<?php endforeach; ?>
 						<?php endif; ?>
-						<li><a class="button button-primary action" href="<?php echo esc_url( admin_url( add_query_arg( array( 'post_type' => $post_type ), 'post-new.php' ) ) ); ?>"><?php echo $object->labels->add_new_item; ?><span class="dashicons dashicons-plus"></span></a></li>
+						<li><a class="button button-primary action" href="<?php echo esc_url( admin_url( add_query_arg( array( 'post_type' => 'page' ), 'post-new.php' ) ) ); ?>"><?php echo $object->labels->add_new_item; ?><span class="dashicons dashicons-plus"></span></a></li>
 					</ul>
 
 				<?php else: // Posts ?>
