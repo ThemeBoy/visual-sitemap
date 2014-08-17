@@ -1,5 +1,5 @@
 === Visual Sitemap ===
-Contributors: ThemeBoy
+Contributors: ThemeBoy, brianmiyaji
 Tags: sitemap, tree, overview, admin, navigation, posts, pages, visual sitemap, visual tree, sitetree, slickmap
 Requires at least: 3.0
 Tested up to: 4.0
