@@ -117,7 +117,7 @@ class Visual_Sitemap {
 						<li><a class="button" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'visual-sitemap', 'taxonomy' => 'post_tag' ), 'admin.php' ) ) ); ?>"><?php echo $tag->labels->name; ?></a></li>
 					</ul>
 
-					<ul class="vs-primary col<?php echo sizeof( $pages ) + 1; ?>">
+					<ul class="vs-primary col<?php echo max( sizeof( $pages ), 1 ) + 1; ?>">
 						<li class="vs-home"><a class="button disabled"><?php bloginfo( 'name' ); ?><span class="dashicons dashicons-admin-home"></span></a></li>
 						<?php if ( sizeof( $pages ) ): ?>
 							<?php foreach ( $pages as $page ): ?>
@@ -139,6 +139,8 @@ class Visual_Sitemap {
 									<?php endif; ?>
 								</li>
 							<?php endforeach; ?>
+						<?php else: ?>
+							<li><a class="button disabled"><?php echo $object->labels->not_found; ?></a></li>
 						<?php endif; ?>
 						<li><a class="button button-primary action" href="<?php echo esc_url( admin_url( add_query_arg( array( 'post_type' => 'page' ), 'post-new.php' ) ) ); ?>"><?php echo $object->labels->add_new_item; ?><span class="dashicons dashicons-plus"></span></a></li>
 					</ul>
@@ -178,7 +180,7 @@ class Visual_Sitemap {
 						<?php endif; ?>
 					</ul>
 
-					<ul class="vs-primary col<?php echo sizeof( $terms ) + 1; ?>">
+					<ul class="vs-primary col<?php echo max( sizeof( $terms ), 1 ) + 1; ?>">
 						<li class="vs-home"><a class="button disabled"><?php bloginfo( 'name' ); ?><span class="dashicons dashicons-admin-home"></span></a></li>
 						<?php if ( sizeof( $terms ) ): ?>
 							<?php foreach ( $terms as $term ): ?>
@@ -216,6 +218,8 @@ class Visual_Sitemap {
 									<?php endif; ?>
 								</li>
 							<?php endforeach; ?>
+						<?php else: ?>
+							<li><a class="button disabled"><?php echo $object->labels->not_found; ?></a></li>
 						<?php endif; ?>
 						<li><a class="button button-primary action" href="<?php echo esc_url( admin_url( add_query_arg( array( 'taxonomy' => $taxonomy ), 'edit-tags.php' ) ) ); ?>"><?php echo $object->labels->add_new_item; ?><span class="dashicons dashicons-plus"></span></a></li>
 					</ul>
@@ -224,7 +228,7 @@ class Visual_Sitemap {
 			</div>
 		</div>
 		<p>
-			<a href="http://wordpress.org/support/view/plugin-reviews/visual-sitemap?rate=5#postform" target="_blank">
+			<a href="http://wordpress.org/support/view/plugin-reviews/visual-sitemap?rate=5#postform">
 				<?php _e( 'Love Visual Sitemap? Help spread the word by rating us 5★ on WordPress.org', 'visual-sitemap' ); ?>
 			</a>
 		</p>
