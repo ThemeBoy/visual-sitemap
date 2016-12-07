@@ -7,7 +7,7 @@
 Plugin Name: Visual Sitemap
 Plugin URI: http://wordpress.org/plugins/visual-sitemap/
 Description: Display an interactive visual sitemap of pages, tags, and categories in admin.
-Author: ThemeBoy
+Author: Brian Miyaji
 Version: 0.9
 Author URI: http://themeboy.com/
 */
